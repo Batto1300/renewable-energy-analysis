@@ -1,0 +1,148 @@
+country,Technology,Indicator,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017
+Europe,Hydropower,Electricity capacity (MW),193196.9,193307.1,193940.9,194560.9,196612.2,199012.5,199314.5,201232,202663.1,204464.3,206183.2,207653.3,208724.9,210736,211460,213940.5,217541.5,219150
+Europe,Wind,Electricity capacity (MW),12732.4,17330.98,23288.48,28136.63,34304.63,40630.81,47885.81,56443.01,63865,75786,84871.4,94660.8,107140.8,118215.5,130047.1,142974.1,155849.4,170620.9
+Europe,Solar,Electricity capacity (MW),201.1,302.2,388.4,628.6,1338.8,2332.7,3329.823,5310.177,10542.5,17206.1,30867.2,54127.6,73491,84024.6,90845.7,99294.9,105863.1,111789.3
+Albania,Hydropower,Electricity capacity (MW),1453,1453,1453,1453,1453,1453,1453,1455,1457,1459,1475,1508,1628,1781,1725,1798,2011,2017.3
+Albania,Wind,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Albania,Solar,Electricity capacity (MW),0,0.1,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.3,0.4,0.6,0.7,0.8,0.9,1.1,1.4,1.6
+Andorra,Hydropower,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Andorra,Wind,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Andorra,Solar,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Austria,Hydropower,Electricity capacity (MW),11613,11640,11504,11545,11578,11632,11649,11810,12263,12446,12706,12980,13076,13149,13293,13351,13689,14125.1
+Austria,Wind,Electricity capacity (MW),50,67,109,322,581,778,935,968,988,994,981,1080,1316,1645,2110,2489,2730,2926
+Austria,Solar,Electricity capacity (MW),5,7,9,23,27,30,36,40,49,71,154,317,363,626,785,937,1096,1404
+Belarus,Hydropower,Electricity capacity (MW),10.2,10.4,11.2,11.2,11.5,11.8,11.9,12.4,12.9,13.3,13.8,14.3,31.6,32.1,32.8,33.5,73.6,95.4
+Belarus,Wind,Electricity capacity (MW),0.25,0.6,1.1,1.1,1.1,1.1,1.1,1.9,1.9,1.9,1.9,2,2,2,3,43.2,68.4,82.8
+Belarus,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0,0.5,4,13,50.5,152.6
+Belgium,Hydropower,Electricity capacity (MW),1413,1421,1421,1420,1425,1412,1414,1417,1418,1417,1425,1426,1427,1429,1431,1422,1425,1486
+Belgium,Wind,Electricity capacity (MW),14,26,31,67,96,167,212,276,324,608,912,1069,1370,1791.7,1929.7,2176,2260,2837
+Belgium,Solar,Electricity capacity (MW),0,0,1,1,1,2,2,20,62,386,904,1391,2581,2922,3027,3122,3300,3571
+Bosnia Herzg,Hydropower,Electricity capacity (MW),1928,1928,1928,1928,1958,1958,1958,1958,1988.6,1988.6,2118.3,2120,2120.9,2121.8,2131.1,2136.9,2165.9,2165.9
+Bosnia Herzg,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0.3,0.3,0.3,0.3,0.3,0.3,0.3
+Bosnia Herzg,Solar,Electricity capacity (MW),0,0,0,0.1,0.2,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,1.3,7.2,10.3,11.6,12
+Bulgaria,Hydropower,Electricity capacity (MW),1880,1705,1948,2515,2848,2848,2848,2876,2984,3001,3048,3108,3181,3203,3219,3219,3223,3223
+Bulgaria,Wind,Electricity capacity (MW),0,0,0,0,1,8,27,30,114,333,488,541,677,683,699,699,699,699
+Bulgaria,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,2,25,154,1013,1020,1026,1029,1028,1030
+Croatia,Hydropower,Electricity capacity (MW),2079,2079,2066,2076,2083,2060,2060,2075,2075,2092,2141,2141,2141,2190,2193,2208,2205,2205
+Croatia,Wind,Electricity capacity (MW),0,0,0,0,6,6,17,17,17,70,79,130,180,254,339,418,483,537
+Croatia,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0.3,4,19,33,48,56,58
+Cyprus,Hydropower,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Cyprus,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,82,134,147,147,147,158,158,158
+Cyprus,Solar,Electricity capacity (MW),0,0,0,0,0,1,1,1,2,4,7,10,17,35,64,76,84,104.9
+Czechia,Hydropower,Electricity capacity (MW),2097,2145,2145,2149,2160,2167,2163,2171,2176,2184,2196,2197,2212,2252,2252,2260,2262,2268
+Czechia,Wind,Electricity capacity (MW),1,1,6,11,17,22,44,114,150,193,213,213,258,262,278,281,282,308
+Czechia,Solar,Electricity capacity (MW),0.1,0.1,0.2,0.3,0.4,1,1,4,40,465,1727,1913,2022,2064,2068,2075,2068,2061
+Denmark,Hydropower,Electricity capacity (MW),10,11,11,11,11,11,9,9,9,9,9,9,9,9,9,7,9,9
+Denmark,Wind,Electricity capacity (MW),2390,2498,2892,3117,3125,3127,3135,3124,3163,3482,3802,3952,4163,4810,4887,5076,5246,5521
+Denmark,Solar,Electricity capacity (MW),1,1,2,2,2,3,3,3,3,5,7,17,402,571,607,782,851,906
+Estonia,Hydropower,Electricity capacity (MW),2,2,3,4,4,5,5,5,5,7,6,5,8,8,5,6,6,6
+Estonia,Wind,Electricity capacity (MW),0,0,1,3,7,31,31,50,77,104,108,180,266,248,275,300,310,310
+Estonia,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0.1,0.1,0.2,0.4,1.5,3.3,6.5,11,11
+Faroe Islands,Hydropower,Electricity capacity (MW),31.6,31.6,31.6,31.6,31.6,31.6,31.6,31.6,31.6,31.6,31.6,31.6,38.1,38.1,38.1,38.1,38.1,38.1
+Faroe Islands,Wind,Electricity capacity (MW),0.15,0.15,0.15,2.13,2.13,4.11,4.11,4.11,4.1,4.1,4.1,4.1,8.6,8.6,20.3,20.3,20.3,20.3
+Faroe Islands,Solar,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Finland,Hydropower,Electricity capacity (MW),2882,2926,2964,2966,2999,3035,3062,3102,3122,3145,3155,3196,3196,3224,3248,3249,3249,3285
+Finland,Wind,Electricity capacity (MW),38,39,43,52,82,82,86,110,143,147,197,199,257,447,627,1005,1565,1995
+Finland,Solar,Electricity capacity (MW),2,3,3,3,4,4,5,5,6,6,7,7,8,9,11,15,35,50
+France,Hydropower,Electricity capacity (MW),25154,25179,25278,25230,25117,25130,25142,25155,25120,25208,25425,25372,25390,25381,25315,25299,25517,25519.5
+France,Wind,Electricity capacity (MW),38,66,138,218,358,690,1412,2223,3403,4582,5912,6679,7517,8202,9068,10217,11467,13113
+France,Solar,Electricity capacity (MW),7,7,8,9,11,13,15,26,80,277,1044,2787,4012,4929,5669,6755,7320,8195
+FYR Macedonia,Hydropower,Electricity capacity (MW),443,443,443,444,544,544,545,546,552,553,555,556,595,617,630,658,660,664
+FYR Macedonia,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,37,37,37
+FYR Macedonia,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,2,4,7,15,17,17,17.2
+Germany,Hydropower,Electricity capacity (MW),9485,9393,9589,9493,10313,10858,10842,10833,10805,11238,11218,11436,11257,11240,11234,11399,11300,11307
+Germany,Wind,Electricity capacity (MW),6095,8754,12001,14381,16419,18248,20474,22116,22794,25732,26903,28712,30979,33477,38614,44580,49592,55876
+Germany,Solar,Electricity capacity (MW),114,195,260,435,1105,2056,2899,4170,6120,10567,18007,25917,34077,36711,37900,39245,40716,42396
+Gibraltar,Hydropower,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Gibraltar,Wind,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Gibraltar,Solar,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Greece,Hydropower,Electricity capacity (MW),3072,3076,3078,3079,3099,3106,3134,3150,3176,3201,3215,3224,3236,3238,3389,3392,3392,3394
+Greece,Wind,Electricity capacity (MW),226,270,287,371,470,491,749,846,1022,1171,1298,1640,1753,1809,1978,2091,2370,2652
+Greece,Solar,Electricity capacity (MW),0,1,1,1,1,1,5,9,12,46,202,612,1536,2579,2596,2604,2604,2604
+Holy See,Hydropower,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Holy See,Wind,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Holy See,Solar,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Hungary,Hydropower,Electricity capacity (MW),48,48,48,54,49,49,49,49,51,53,53,55,56,57,57,57,57,57
+Hungary,Wind,Electricity capacity (MW),0,1,1,3,3,17,33,61,134,203,293,331,325,329,329,329,329,329
+Hungary,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,1,1,2,4,12,35,77,168,220,300
+Iceland,Hydropower,Electricity capacity (MW),1064,1109,1155,1155,1163,1163,1163,1758,1879,1875,1883,1884,1877,1984,1984,1987,1987,1987
+Iceland,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,3,3,3
+Iceland,Solar,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Ireland,Hydropower,Electricity capacity (MW),528,530,532,532,532,526,526,526,526,526,529,529,529,529,529,529,529,529
+Ireland,Wind,Electricity capacity (MW),119,126,138,214,342,517,749,980,1030,1266,1374,1631,1764,1941,2211,2440,2827,3253
+Ireland,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,1,1,1,1,1,2,2,6,10
+Italy,Hydropower,Electricity capacity (MW),20346,20434,20514,20660,20744,20993,21072,21117,21276,21371,21520,21737,21880,22009,22098,22220,22298,22447
+Italy,Wind,Electricity capacity (MW),363,664,780,874,1127,1635,1902,2702,3525,4879,5794,6918,8102,8542,8683,9137,9384,9636
+Italy,Solar,Electricity capacity (MW),19,20,22,26,31,34,45,110,483,1264,3596.7,13135.7,16789.7,18190.1,18600.1,18907.1,19289.1,19698.1
+Kosovo,Hydropower,Electricity capacity (MW),32,32,32,32,32,32,40,40,40,40,42,43,43,43,43,43,86,88
+Kosovo,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+Kosovo,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,7,7
+Latvia,Hydropower,Electricity capacity (MW),1513,1523,1529,1537,1536,1536,1536,1536,1536,1536,1576,1576,1576,1589,1590,1589,1565,1565
+Latvia,Wind,Electricity capacity (MW),2,2,22,26,26,26,26,26,28,29,30,36,59,67,69,69,70,77
+Latvia,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0.2,0.2,0.2,0.2,0.2,0.7,0.7
+Liechtenstein,Hydropower,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Liechtenstein,Wind,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Liechtenstein,Solar,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Lithuania,Hydropower,Electricity capacity (MW),863,863,863,869,870,877,877,875,875,876,876,876,876,876,877,877,877,877
+Lithuania,Wind,Electricity capacity (MW),0,0,0,0,1,1,31,47,54,98,133,202,275,279,288,436,509,509
+Lithuania,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0.1,0.1,0.1,0.3,7,68,69,69,70,82
+Luxembourg,Hydropower,Electricity capacity (MW),1133,1134,1134,1134,1134,1134,1134,1134,1134,1134,1134,1134,1134,1134,1330,1330,1330,1330
+Luxembourg,Wind,Electricity capacity (MW),14,14,14,21,35,35,35,35,43,43,44,45,58,58,58,64,120,120
+Luxembourg,Solar,Electricity capacity (MW),0,0,2,14,24,24,24,24,25,26,29,41,75,95,110,116,122,122
+Malta,Hydropower,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Malta,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0.1,0.1
+Malta,Solar,Electricity capacity (MW),0,0,0,0,0,0.1,0.1,0.1,0.2,0.9,1,5,16,28,55,74,93,110
+Moldova Rep,Hydropower,Electricity capacity (MW),64,60,60,60,59,59,56,56,64,64,64,64,64,64,64,64,64,64
+Moldova Rep,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,2,2.3
+Moldova Rep,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,2
+Monaco,Hydropower,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Monaco,Wind,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Monaco,Solar,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Montenegro,Hydropower,Electricity capacity (MW),0,0,0,0,0,676,676,676,676,676,676,658,658,651,651,651,651,662
+Montenegro,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72
+Montenegro,Solar,Electricity capacity (MW),0,0,0,0,0,0,0.023,0.177,0.4,0.4,0.6,0.8,0.9,1.1,2.1,2.7,3.1,3.4
+Netherlands,Hydropower,Electricity capacity (MW),37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37
+Netherlands,Wind,Electricity capacity (MW),447,485,672,905,1075,1224,1558,1748,2149,2222,2237,2316,2433,2713,2865,3391,4257,4270
+Netherlands,Solar,Electricity capacity (MW),13,21,26,46,50,51,53,54,59,69,90,149,369,746,1048,1515,2049,2590
+Norway,Hydropower,Electricity capacity (MW),28126,27679,27913,27989,28030,28549,28725,28957,29413,29539,29693,29969,30509,31033,31240,31372,31834,31947
+Norway,Wind,Electricity capacity (MW),13,13,97,97,152,265,284,348,395,423,425,512,705,818,863,867,883,1207
+Norway,Solar,Electricity capacity (MW),6,6,6,7,7,7,8,8,8.3,8.7,9.1,9.5,10,11,13,15,26.7,42.2
+Poland,Hydropower,Electricity capacity (MW),2183,2234,2207,2273,2282,2321,2331,2328,2335,2338,2342,2346,2351,2355,2364,2370,2386,2381.5
+Poland,Wind,Electricity capacity (MW),4,19,32,35,40,121,172,306,526,709,1108,1800,2564,3429,3836,4886,5747,5797.8
+Poland,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,1,1,2,27,108,187,268.3
+Portugal,Hydropower,Electricity capacity (MW),4535,4560,4583,4583,4831,5017,5053,5061,5058,5091,5106,5535,5712,5661,5715,6168,6960,7221
+Portugal,Wind,Electricity capacity (MW),83,125,190,268,553,1064,1681,2201,2857,3326,3796,4256,4412,4610,4856,4937,5123,5123
+Portugal,Solar,Electricity capacity (MW),1,1,1,2,2,2,3,24,59,115,134,172,238,296,415,447,462,476
+Romania,Hydropower,Electricity capacity (MW),6120,6122,6242,6248,6278,6289,6282,6331,6362,6450,6474,6483,6548,6610,6613,6730,6734,6754
+Romania,Wind,Electricity capacity (MW),0,0,0,0,0,1,1,3,5,15,389,988,1822,2773,3244,3130,3025,3030
+Romania,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0.1,0.1,0.1,1,41,761,1293,1326,1372,1378
+San Marino,Hydropower,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+San Marino,Wind,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+San Marino,Solar,Electricity capacity (MW),,,,,,,,,,,,,,,,,,
+Serbia,Hydropower,Electricity capacity (MW),2887.1,2887.1,2887.1,2887.1,2887.1,2887.1,2818,2818,2818,2829.8,2831.5,2849.4,2879.3,2931,3017,3022,3030,3119
+Serbia,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0.5,0.5,0.5,10,17,25
+Serbia,Solar,Electricity capacity (MW),0,0,0,0,0,0.1,0.2,0.4,0.9,1.2,1.3,1.5,3.1,4.7,6,9,11,12
+Slovakia,Hydropower,Electricity capacity (MW),2420,2502,2505,2507,2518,2512,2513,2515,2548,2487,2516,2523,2522,2523,2523,2522,2524,2524
+Slovakia,Wind,Electricity capacity (MW),0,0,0,3,3,5,5,5,5,3,3,3,3,5,3,4,4,4
+Slovakia,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,19,496,513,533,533,533,533,533
+Slovenia,Hydropower,Electricity capacity (MW),843,906,949,974,974,979,1009,1018,1027,1070,1254,1253,1254,1299,1296,1295,1293,1338.3
+Slovenia,Wind,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,5,5,5
+Slovenia,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,1,4,12,57,142,187,223,238,233,236.4
+Spain,Hydropower,Electricity capacity (MW),17960,18032,18068,18043,18167,18220,18318,18372,18451,18505,18535,18540,18550,19185,19223,20053,20056,20034
+Spain,Wind,Electricity capacity (MW),2206,3397,4891,5945,8317,9918,11722,14820,16555,19176,20693,21529,22789,22958,22975,22943,23003,22988
+Spain,Solar,Electricity capacity (MW),12,16,20,27,37,60,180,750,3450,3770,4653,5501,6646,7085,7087,7156,7273,7278
+Sweden,Hydropower,Electricity capacity (MW),16525,16568,16232,16143,16345,16345,16270,16637,16437,16652,16732,16577,16414,16494,15996,16329,16466,16494
+Sweden,Wind,Electricity capacity (MW),209,295,357,399,452,493,516,710,814,1448,2019,2769,3607,4194,5097,5840,6434,6631
+Sweden,Solar,Electricity capacity (MW),3,3,3,4,4,4,5,6,8,9,11,12,24,43,60,104,153,233
+Switzerland,Hydropower,Electricity capacity (MW),13239,13282,13294,13309,13317,13355,13356,13463,13475,13521,13723,13769,13802,13817,13743,13815,14806,15091
+Switzerland,Wind,Electricity capacity (MW),3,5,5,5,9,12,12,12,14,18,42,46,49,60,60,60,75,75
+Switzerland,Solar,Electricity capacity (MW),16,18,20,22,24,28,30,37,49,79,125,223,437,756,1061,1394,1664,1923.9
+United Kingdom,Hydropower,Electricity capacity (MW),4273,4417,4378,4274,4287,4289,4241,4266,4367,4379,4391,4423,4437,4453,4474,4521,4579,4618
+United Kingdom,Wind,Electricity capacity (MW),412,427,534,742,933,1565,1955,2477,3447,4420,5421,6596,9030,11282,13074,14316,16217,19837
+United Kingdom,Solar,Electricity capacity (MW),2,3,4,6,8,11,14,18,23,27,95,1000,1753,2937,5528,9535,11899,12760
+Ukraine,Hydropower,Electricity capacity (MW),4905,4905,4905,4905,4905,4905,4905,5056,5083,5421,5458,5469,5470,5489,5851,5883,6167,6177
+Ukraine,Wind,Electricity capacity (MW),5,36.23,46.23,54.4,71.4,76.6,76.6,82,83,86,88,146,248,362,513.9,513.9,526,553
+Ukraine,Solar,Electricity capacity (MW),0,0,0,0,0,0,0,0,0,0,2.5,188.2,371.6,748.4,818.9,839,938,1149
+European Union,Hydropower,Electricity capacity (MW),139256.1,139729.1,140070.8,140598.9,142464.3,143631.3,143819.5,144648.5,145416.8,146696.8,147875.6,148974.6,149270.1,150395.3,150571.3,152700.3,154228.3,155297
+European Union,Wind,Electricity capacity (MW),12718.3,17283.3,23149.6,27995.7,34095.4,40302.25,47543.175,56032.93,63404.9,75290.9,84348.3,93988.3,106165.3,116999,128583,141460,154260.1,168585.9
+European Union,Solar,Electricity capacity (MW),179.1,278.1,362.2,599.3,1307.663,2297.989,3297.825,5276.382,10504.9,17186.5,30896.2,53954.1,72983.4,82826.9,89265.5,97366.7,103511.6,108854
