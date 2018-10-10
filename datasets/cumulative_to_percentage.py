@@ -1,7 +1,7 @@
 import pandas as pd 
 import os
 
-FILENAME = "all-energy-capacity-eu-adj.csv"
+FILENAME = "all_energy_capacity.csv"
 FILENAME_2 = "all_energy_capacity_eu_percentage.csv" 
 # reads and converts the csv file into a datafreame 
 df = pd.read_csv(FILENAME, skiprows = 0, index_col = [0,1]) 

@@ -4,7 +4,7 @@ import csv
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-FILENAME = "all-energy-capacity-eu-adj.csv"
+FILENAME = "all_energy_capacity.csv"
 TMP_FILENAME = "TMP.csv"
 
 
