@@ -49,6 +49,6 @@ if __name__ == "__main__":
     replace_file(LATITUDE_FILE,LATITUDE_OUTPUT_FILE)
     # Reduce CAPACITY dataset
     capacity_dataframe = pd.read_csv(CAPACITY_FILE)
-    capacity_dataframe.rename(columns={'Country/area':'country'},inplace=True)
+    capacity_dataframe.rename(columns={'Country':'country'},inplace=True)
     reduce_to_eu(capacity_dataframe, CAPACITY_OUTPUT_FILE)
     replace_file(CAPACITY_FILE, CAPACITY_OUTPUT_FILE)
