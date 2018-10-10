@@ -4,11 +4,11 @@ import csv
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-FILENAME = "all_energy_capacity.csv"
-TMP_FILENAME = "TMP.csv"
+FILENAME = "original_data.csv"
+OUTPUT_FILENAME = "all_energy_capacity.csv"
 
 
-with open(FILENAME, 'r') as o, open(TMP_FILENAME, "w") as w:  
+with open(FILENAME, 'r') as o, open(OUTPUT_FILENAME, "w") as w:  
     nation_reader = csv.reader(o)
     header = next(nation_reader)
     w.write("{}\n".format(','.join(header)))
@@ -25,5 +25,3 @@ with open(FILENAME, 'r') as o, open(TMP_FILENAME, "w") as w:
             except StopIteration:
                 row = None   # empty address
 
-os.remove(FILENAME)
-os.rename(TMP_FILENAME, FILENAME)
