@@ -43,8 +43,7 @@ if __name__ == "__main__":
     reduce_to_eu(latitude_dataframe, LATITUDE_OUTPUT_FILE)
     # Reduce CAPACITY dataset
     capacity_dataframe = pd.read_csv(CAPACITY_FILE)
-    capacity_dataframe.rename(
-        columns={'Country/area': 'country'}, inplace=True)
+    capacity_dataframe.rename(columns={'Country':'country'},inplace=True)
     reduce_to_eu(capacity_dataframe, CAPACITY_OUTPUT_FILE)
     # Reduce Political Orientation dataset
     orientation_dataframe = pd.read_csv(POLITICAL_ORIENTATION_FILE)
