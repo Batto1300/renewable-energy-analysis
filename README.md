@@ -14,4 +14,4 @@ Representing and Manipulating Data - Univeristy of Stirling Course Project
 Also:
 * Do __not__ touch the datasets in the original folder, just open them in read mode.
 * Remember to keep only the columns in point 2. because you will add columns to the dataframe as you join.
-* The script must be named _datasetname_cleaning.py_ e.g.: _Latitude_cleaning.py_
+* The script must be named _datasetname_cleaning.py_ e.g.: _Latitude_cleaning.py_ and placed in the top level of the dataset folder.
