@@ -1,25 +1,35 @@
+""" This script cleans the original data set 
+    containing the latitude distance.
+    Firsly, we filter the dataset for those 
+    countries which are common to all datasets. 
+    Secondly, just as a data manipulation exercise, 
+    we convert the latitude figures from degrees to 
+    kilometres (meridian distance).
+    The analysis does not change, however the units of
+    measure are more informative.
+"""
+
+
 import pandas as pd
 import math
 
-# import original data on countries latitude
+# original data (csv file) - countries latitude
 LATITUDE = "SolarAnalysis/Cleaning/original/latitude-countries.csv"
-# import list of countries common to all dataframes
+
+# # years and countries common to all datasets
 COMMOM_COUNTRIES = "SolarAnalysis/Cleaning/original/common_countries_and_years.csv"
 
 # save transformed dataframe to new file - meridian distance km
 OUTPUT_FILENAME = "SolarAnalysis/Cleaning/cleaned_meridian_countries.csv"
 
-# import countries and their latitude from the CSV file
+# import only countries and their latitude from the LATITUDE file
 df_latitude = pd.read_csv(LATITUDE, usecols=["country", "latitude"])
+
 # import the list of countries common to all dataframes
 df_countries = pd.read_csv(COMMOM_COUNTRIES, usecols=["country"])
-# merger the two dataframes to get only the latitudes for the common countries
-df_latitude = pd.merge(df_latitude, df_countries, on="country", how="inner")
 
-""" Following we will convert latitude to meridian distance (km).
-    Note that this is not necessary, it won't change th eoutcome 
-    of the results. However, I thought it would be a good 
-    exercise.  """
+# filter the dataframe for common countries with merge method
+df_latitude = pd.merge(df_latitude, df_countries, on="country", how="inner")
 
 # average earth radius (km)
 earth_radius = 6371
