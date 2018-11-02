@@ -16,7 +16,7 @@ ENERGY_CONSUMPTION = "SolarAnalysis/Cleaning/original/energy_consumption.csv"
 # years and countries common to all datasets
 COUNTRIES_YEARS = "SolarAnalysis/Cleaning/original/common_countries_and_years.csv"
 
-# # name of new csv file to store the new filtered dataset
+# name of new csv file to store the new filtered dataset
 OUTPUT_FILENAME = "SolarAnalysis/Cleaning/cleaned_energy_consumption.csv"
 
 
