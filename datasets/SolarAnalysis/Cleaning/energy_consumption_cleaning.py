@@ -14,7 +14,8 @@ import pandas as pd
 ENERGY_CONSUMPTION = "SolarAnalysis/Cleaning/original/energy_consumption.csv"
 
 # years and countries common to all datasets
-COUNTRIES_YEARS = "SolarAnalysis/Cleaning/original/common_countries_and_years.csv"
+COUNTRIES = "SolarAnalysis/Cleaning/original/common_countries.csv"
+YEARS = "SolarAnalysis/Cleaning/original/common_years.csv"
 
 # name of new csv file to store the new filtered dataset
 OUTPUT_FILENAME = "SolarAnalysis/Cleaning/cleaned_energy_consumption.csv"
@@ -34,8 +35,8 @@ df_energy_consumption.drop(columns = header[-3:], inplace = True)
 df_energy_consumption = df_energy_consumption[3:]
 
 # importing countries and years common to all dataframes
-df_COUNTRIES = pd.read_csv(COUNTRIES_YEARS, usecols=["country"])
-df_years = pd.read_csv(COUNTRIES_YEARS, usecols=["year"])
+df_COUNTRIES = pd.read_csv(COUNTRIES)
+df_years = pd.read_csv(YEARS)
 # # from dataframe object to list
 YEARS = list(df_years["year"])
 # # convert years from integer to string type

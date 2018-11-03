@@ -17,7 +17,8 @@ import csv
 FILENAME = "SolarAnalysis/Cleaning/original/all_energy_capacity.csv"
 
 # years and countries common to all datasets
-COUNTRIES_YEARS = "SolarAnalysis/Cleaning/original/common_countries_and_years.csv"
+COUNTRIES = "SolarAnalysis/Cleaning/original/common_countries.csv"
+YEARS = "SolarAnalysis/Cleaning/original/common_years.csv"
 
 # name of new csv file to store the new cleaned and filtered dataset
 OUTPUT_FILENAME = "SolarAnalysis/Cleaning/cleaned_all_energy_capacity.csv"
@@ -64,7 +65,7 @@ df_energy_capacity = pd.read_csv(
     OUTPUT_FILENAME, usecols=lambda x: x not in columns_to_skip)
 
 # import countries which are common to all data sets of the report
-df_countries = pd.read_csv(COUNTRIES_YEARS, usecols=["country"])
+df_countries = pd.read_csv(COUNTRIES)
 
 # filter the energy capacity data set by the common countries using merge
 df_energy_capacity = pd.merge(
@@ -75,7 +76,7 @@ df_energy_capacity = df_energy_capacity[df_energy_capacity["Technology"] == "Sol
 df_energy_capacity.set_index(["country", "Technology"], inplace=True)
 
 # import years which are common to all data sets of the report
-df_years = pd.read_csv(COUNTRIES_YEARS, usecols=["year"])
+df_years = pd.read_csv(YEARS)
 # from dataframe object to list
 years = list(df_years["year"])
 # convert years from integer to string type

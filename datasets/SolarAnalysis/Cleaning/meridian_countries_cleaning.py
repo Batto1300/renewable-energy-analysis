@@ -16,8 +16,8 @@ import math
 # original data (csv file) - countries latitude
 LATITUDE = "SolarAnalysis/Cleaning/original/latitude-countries.csv"
 
-# # years and countries common to all datasets
-COMMOM_COUNTRIES = "SolarAnalysis/Cleaning/original/common_countries_and_years.csv"
+# countries common to all datasets
+COUNTRIES = "SolarAnalysis/Cleaning/original/common_countries.csv"
 
 # save transformed dataframe to new file - meridian distance km
 OUTPUT_FILENAME = "SolarAnalysis/Cleaning/cleaned_meridian_countries.csv"
@@ -26,7 +26,7 @@ OUTPUT_FILENAME = "SolarAnalysis/Cleaning/cleaned_meridian_countries.csv"
 df_latitude = pd.read_csv(LATITUDE, usecols=["country", "latitude"])
 
 # import the list of countries common to all dataframes
-df_countries = pd.read_csv(COMMOM_COUNTRIES, usecols=["country"])
+df_countries = pd.read_csv(COUNTRIES)
 
 # filter the dataframe for common countries with merge method
 df_latitude = pd.merge(df_latitude, df_countries, on="country", how="inner")
