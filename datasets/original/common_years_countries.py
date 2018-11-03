@@ -133,12 +133,20 @@ common_countries = sorted(list(common_countries))
 common_years = sorted(list(common_years))
 
 # write to a csv file
-with open("../common_countries_and_years.csv", 'w') as f: 
+with open("../common_countries.csv", 'w') as c, open("../common_years.csv", 'w') as y: 
     # writw to file with w
-    w = csv.writer(f, delimiter = ',')
+    w = csv.writer(c, delimiter = ',')
     # header names
-    w.writerow(["country", "year"])
+    w.writerow(["country"])
     # countries and years
-    w.writerows(it.zip_longest(common_countries, common_years))
+    for country in common_countries:
+        w.writerow([country])
+    w = csv.writer(y, delimiter = ',')
+    # header names
+    w.writerow(["year"])
+    # countries and years
+    for year in common_years:
+        w.writerow([str(year)])
+    
 
         
