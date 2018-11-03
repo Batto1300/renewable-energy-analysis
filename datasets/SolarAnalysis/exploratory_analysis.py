@@ -27,7 +27,7 @@ dataframes = {"solar": ENERGY_CAPACITY, "consumption": ENERGY_CONSUMPTION,
 # loop over all key,value pairs of the dataframes dictionary
 for key,value in dataframes.items():
     # import the csv file into a dataframe & set the country column as index
-    df = pd.read_csv(value, index_col=['country'])
+    df = pd.read_csv(value, index_col=['country'], decimal=",")
     # replace the filename with the respective dataframe
     dataframes[key] = df
 
@@ -36,3 +36,15 @@ DATA = pd.concat(dataframes, axis=1, join="inner")
 # the output is a multi_level index with the key as top level
 # the inner join will join on the common row indexes country
 # we're ready for exploratory analysis
+
+
+import matplotlib.pyplot as plt
+# consumption', 'meridian', 'solar'], ['2000'-'2015', 'Technology', 'meridian']
+# visual - energy consumption
+solar_15 = pd.Series(DATA["solar"]["2015"].astype(float).sort_values())
+solar_15 = solar_15/solar_15.sum()
+solar_15 = pd.Series(DATA["solar"]["2015"].astype(float), DATA["meridian"]["meridian"])
+# DATA[["solar", "consumption"]] # solution below
+#DATA.iloc[:, DATA.columns.get_level_values(1)=='2015'].sort_values(by = ('consumption','2015')).plot.barh(rot=45) 
+plt.show()
+plt.close("all")
