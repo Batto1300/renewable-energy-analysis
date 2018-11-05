@@ -37,14 +37,33 @@ DATA = pd.concat(dataframes, axis=1, join="inner")
 # the inner join will join on the common row indexes country
 # we're ready for exploratory analysis
 
-
+import numpy as np
 import matplotlib.pyplot as plt
+
+# column indexes names: 
 # consumption', 'meridian', 'solar'], ['2000'-'2015', 'Technology', 'meridian']
-# visual - energy consumption
-solar_15 = pd.Series(DATA["solar"]["2015"].astype(float).sort_values())
+
+
+# cumulative solar energy capacity as of 2015
+solar_15 = pd.Series(DATA["solar"]["2015"].astype(float).sort_values(ascending = False))
 solar_15 = solar_15/solar_15.sum()
-solar_15 = pd.Series(DATA["solar"]["2015"].astype(float), DATA["meridian"]["meridian"])
-# DATA[["solar", "consumption"]] # solution below
-#DATA.iloc[:, DATA.columns.get_level_values(1)=='2015'].sort_values(by = ('consumption','2015')).plot.barh(rot=45) 
+# the top 20% european countries OWN 88% of the cumulative energy capacity as of 2015
+solar_15.plot.bar() 
+
 plt.show()
 plt.close("all")
+
+# energy capacity as a function of geographical location - closer to equator, higher potential
+solar_15 = pd.Series(DATA["solar"]["2015"].astype(float))
+# look at the magnitudes
+meridian = pd.Series(DATA["meridian"]["meridian"]).astype(float)
+
+plt.scatter(meridian, solar_15, alpha=.4, c=range(len(meridian))) # c=range(len(meridian))
+#plt.colorbar()
+plt.style.use('classic')
+plt.grid()
+plt.xlabel("Meridian Distance (km)")
+plt.ylabel("Cumulative Energy Capacity (M...)")
+plt.show()
+plt.close("all")
+# not all countries require the same energy production - different demands
