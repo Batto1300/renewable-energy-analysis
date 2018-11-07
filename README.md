@@ -3,7 +3,7 @@
 ## Before Writing the code
 
 1. From the project root folder: `pip install -r requirements.txt`
-2. Add the project folder to the PYTHONPATH. 
+2. Add the project folder to the PYTHONPATH.
 3. To check that you addded it corectly run pytest from the project folder
 
 Usefull Links:
