@@ -2,6 +2,7 @@ import country_converter
 import pandas as pd
 import csv
 import functools
+import itertools as it
 
 
 
@@ -17,7 +18,10 @@ ENERGY_CAPACITY = "all_energy_capacity.csv"
 
 # countries:
 df_countries = pd.read_csv(ENERGY_CAPACITY, usecols=["Country"])
-european_countries.append(set(df_countries["Country"]))
+countries = set(df_countries["Country"])
+# United Kingdom reported as UK - consistency
+countries.add("United Kingdom")
+european_countries.append(countries)
 
 # years:
 df_years = pd.read_csv(ENERGY_CAPACITY, nrows=0)
@@ -40,6 +44,8 @@ header_countries = list(df_countries.columns.values)
 # countries appear as ISO2 code - convert to full name
 header_countries = country_converter.convert(
     names=header_countries, to='name_short', not_found=None)
+# uppercasing the first letter for each country name
+#header_countries = [word[:1].upper() + word[1:] for word in header_countries]
 # Issue: UK and EL (Greece) were not found:
 header_countries.append('United Kingdom')
 header_countries.append('Greece')
@@ -126,14 +132,21 @@ common_countries = sorted(list(common_countries))
 
 common_years = sorted(list(common_years))
 
-data = {"country": common_countries, "year": common_years}
-
 # write to a csv file
-with open("common_countries_and_years.csv", 'w') as f: 
+with open("../common_countries.csv", 'w') as c, open("../common_years.csv", 'w') as y: 
     # writw to file with w
-    w = csv.writer(f, delimiter = ',')
+    w = csv.writer(c, delimiter = ',')
     # header names
-    w.writerow(data.keys())
+    w.writerow(["country"])
     # countries and years
-    w.writerows(zip(*data.values()))
+    for country in common_countries:
+        w.writerow([country])
+    w = csv.writer(y, delimiter = ',')
+    # header names
+    w.writerow(["year"])
+    # countries and years
+    for year in common_years:
+        w.writerow([str(year)])
+    
+
         
