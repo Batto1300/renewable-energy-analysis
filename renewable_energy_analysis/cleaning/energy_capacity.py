@@ -13,6 +13,8 @@ import os
 import csv
 # import class with full paths to files
 import file_names as fn
+
+
 # original data (csv file) - cumulative energy capacity figures
 ORIGINAL_ENERGY_CAPACITY = fn.OriginalPaths.CAPACITY
 # countries common to all datasets

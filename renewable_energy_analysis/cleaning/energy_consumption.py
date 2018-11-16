@@ -9,6 +9,8 @@
 import pandas as pd 
 # import class with full paths to files
 import file_names as fn
+
+
 # original data (csv file) - energy consumption for world countries
 ORIGINAL_ENERGY_CONSUMPTION = fn.OriginalPaths.CONSUMPTION
 # years and countries common to all datasets
