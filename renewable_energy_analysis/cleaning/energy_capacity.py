@@ -63,6 +63,8 @@ columns_to_skip = ['Indicator']
 # read the file without the above column
 df_energy_capacity = pd.read_csv(
     CLEANED_ENERGY_CAPACITY, usecols=lambda x: x not in columns_to_skip)
+# change UK to United Kingdom
+df_energy_capacity.loc[df_energy_capacity["country"] == "UK", "country"] = "United Kingdom"
 # filter the energy capacity data set by the common countries using merge
 df_energy_capacity = pd.merge(
     df_energy_capacity, df_countries, on="country", how="inner") 
