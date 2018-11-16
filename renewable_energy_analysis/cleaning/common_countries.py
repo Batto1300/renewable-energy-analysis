@@ -12,7 +12,7 @@ import csv
 import functools
 import os
 # import class with full paths to files
-import renewable_energy_analysis as rea
+import file_names as rea
 
 def extract_common_countries(FILES, eu28_countries):
     """This function extract countries common to all 
