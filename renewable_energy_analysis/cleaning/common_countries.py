@@ -23,6 +23,7 @@ POLITICS = fn.OriginalPaths.POLITICS
 CONSUMPTION = fn.OriginalPaths.CONSUMPTION
 CAPACITY = fn.OriginalPaths.CAPACITY
 WIND = fn.OriginalPaths.WIND
+LATITUDE = fn.OriginalPaths.LATITUDE
 
 
 def extract_common_countries(FILES, eu28_countries):
@@ -94,7 +95,8 @@ FILES = [(GDP, ("column", 1)),
          (POLITICS, ("column", 1)),
          (TEMP_CONSUMPTION, ("column", 0)),
          (CAPACITY, ("column", 0)),
-         (WIND, ("header"))
+         (WIND, ("header")),
+         (LATITUDE, ("column",3))
          ]
 # list of the European Union countries
 eu28_countries = country_converter.CountryConverter().EU28["name_short"]
