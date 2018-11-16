@@ -16,19 +16,23 @@ Usefull Links:
 To access the datasets import the renewable_energy_analysis package and access the paths like so:
 
 ```python
-import renewable_energy_analysis as rea
+import file_names as fn
+
+
 # access original files
 # use always r (read)
-gdp_file = open(rea.OriginalPaths.GDP,'r')
+gdp_file = open(fn.OriginalPaths.GDP,'r')
 ```
 
 or
 
 ```python
-import renewable_energy_analysis as rea
+import renewable_energy_analysis as fn
+
+
 # access cleaned files
 # use r (read) or w (write) depending on the use
-gdp_file = open(rea.CleanedPaths.GDP, 'r')
+gdp_file = open(fn.CleanedPaths.GDP, 'r')
 ```
 
 ## Instructions on how to clean the datasets
