@@ -9,27 +9,19 @@ import functools
 import itertools as it
 import os
 # import full paths to files
-import renewable_energy_analysis as rea
+import file_names as fn
+
 
 # csv filename for years common to all datasets
-COMMON_YEARS = "renewable_energy_analysis/datasets/cleaned/common_years.csv"
-
+COMMON_YEARS = fn.CleanedPaths.YEARS
 # get all files' full paths
-GDP = rea.OriginalPaths.GDP
-POLITICS = rea.OriginalPaths.POLITICS
-CONSUMPTION = rea.OriginalPaths.CONSUMPTION
-CAPACITY = rea.OriginalPaths.CAPACITY
-WIND = rea.OriginalPaths.WIND
-
+GDP = fn.OriginalPaths.GDP
+POLITICS = fn.OriginalPaths.POLITICS
+CONSUMPTION = fn.OriginalPaths.CONSUMPTION
+CAPACITY = fn.OriginalPaths.CAPACITY
+WIND = fn.OriginalPaths.WIND
 # remove last rows from CONSUMPTION as interfering;
 TEMP_CONSUMPTION = "temp_consumption.csv"
-# f for file in read mode
-with open(CONSUMPTION, 'r') as r, open(TEMP_CONSUMPTION, 'w') as w:
-    lines = r.readlines()
-    lines = lines[:-12]
-    writer = csv.writer(w, delimiter=',')
-    w.write("{}\n".format(','.join(lines)))
-
 # list of tuples: (file, (where ,year_index))
 FILES = [(GDP, ("row", 1)),
          (POLITICS, ("column", 0)),
@@ -61,7 +53,7 @@ def extract_common_years(FILES):
         if twople[1] == "header":
             # get the years with no repetitions
             mixed_years = df_mixed_years.columns.values
-        # years: pandas object to list 
+        # years: pandas object to list
         mixed_years = list(mixed_years)
         # filter only the years - some years are floats (.0)
         years = []
@@ -81,6 +73,13 @@ def extract_common_years(FILES):
     # return years common to all data sets
     return sorted(common_years)
 
+
+# f for file in read mode
+with open(CONSUMPTION, 'r') as r, open(TEMP_CONSUMPTION, 'w') as w:
+    lines = r.readlines()
+    lines = lines[:-12]
+    writer = csv.writer(w, delimiter=',')
+    w.write("{}\n".format(','.join(lines)))
 # call function to get common years
 common_years = extract_common_years(FILES)
 # write years to a csv file ready for analysis
@@ -95,4 +94,3 @@ with open(COMMON_YEARS, 'w') as y:
 
 # remove temporary file
 os.remove(TEMP_CONSUMPTION)
-

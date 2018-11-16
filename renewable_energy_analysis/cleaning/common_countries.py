@@ -12,7 +12,18 @@ import csv
 import functools
 import os
 # import class with full paths to files
-import file_names as rea
+import file_names as fn
+
+
+# name of csv file to store countries common to all datasets
+COMMON_COUNTRIES = fn.CleanedPaths.COUNTRIES
+# get all original files' full paths
+GDP = fn.OriginalPaths.GDP
+POLITICS = fn.OriginalPaths.POLITICS
+CONSUMPTION = fn.OriginalPaths.CONSUMPTION
+CAPACITY = fn.OriginalPaths.CAPACITY
+WIND = fn.OriginalPaths.WIND
+
 
 def extract_common_countries(FILES, eu28_countries):
     """This function extract countries common to all 
@@ -25,7 +36,7 @@ def extract_common_countries(FILES, eu28_countries):
         eu28_countries: list of the European Union
         members countries.
     """
-    # store countries from each data set into a list as type = set 
+    # store countries from each data set into a list as type = set
     eu_common_countries = [set(eu28_countries)]
     # repeat the extraction for each data set
     for i in range(len(FILES)):
@@ -66,15 +77,6 @@ def extract_common_countries(FILES, eu28_countries):
     # return countries common to all data sets in alphabetical order
     return sorted(eu_common_countries)
 
-# name of csv file to store countries common to all datasets
-COMMON_COUNTRIES = "renewable_energy_analysis/datasets/cleaned/common_countries.csv"
-
-# get all original files' full paths
-GDP = rea.OriginalPaths.GDP
-POLITICS = rea.OriginalPaths.POLITICS
-CONSUMPTION = rea.OriginalPaths.CONSUMPTION
-CAPACITY = rea.OriginalPaths.CAPACITY
-WIND = rea.OriginalPaths.WIND
 
 # remove last rows from CONSUMPTION as interfering and create a temporary file
 TEMP_CONSUMPTION = "temp_consumption.csv"
@@ -87,21 +89,17 @@ with open(CONSUMPTION, 'r') as r, open(TEMP_CONSUMPTION, 'w') as w:
     # write the modifies file to a temp file
     writer = csv.writer(w, delimiter=',')
     w.write("{}\n".format(','.join(lines)))
-
 # list of triples: (file, countries' names location , country_index)
-FILES = [(GDP, ("column", 1)), 
+FILES = [(GDP, ("column", 1)),
          (POLITICS, ("column", 1)),
-         (TEMP_CONSUMPTION, ("column", 0)), 
-         (CAPACITY, ("column", 0)), 
+         (TEMP_CONSUMPTION, ("column", 0)),
+         (CAPACITY, ("column", 0)),
          (WIND, ("header"))
          ]
-
 # list of the European Union countries
 eu28_countries = country_converter.CountryConverter().EU28["name_short"]
-
 # call function to get common countries to all data sets
 common_countries = extract_common_countries(FILES, eu28_countries)
-
 # store these common countries in a csv file
 with open(COMMON_COUNTRIES, 'w') as c:
     # write to file comma separator
@@ -111,9 +109,5 @@ with open(COMMON_COUNTRIES, 'w') as c:
     # write countries' names each on a new line
     for country in common_countries:
         w.writerow([country])
-
 # remove the temporarily created file
 os.remove(TEMP_CONSUMPTION)
-
-
-
