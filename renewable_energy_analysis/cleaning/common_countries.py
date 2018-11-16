@@ -15,7 +15,7 @@ import os
 import file_names as fn
 
 
-# name of csv file to store countries common to all datasets
+# path of csv file to store countries common to all datasets
 COMMON_COUNTRIES = fn.CleanedPaths.COUNTRIES
 # get all original files' full paths
 GDP = fn.OriginalPaths.GDP
