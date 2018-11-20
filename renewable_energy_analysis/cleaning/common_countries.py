@@ -51,13 +51,13 @@ def extract_common_countries(FILES, eu28_countries):
             # get the countries with no repetitions
             countries = df_countries.iloc[:, column_index].unique()
         # countries lie in one of the rows
-        if triple[1][0] == "row":
+        elif triple[1][0] == "row":
             # get the row index
             row_index = triple[1][1]
             # get the countries' names with no repetitions
             countries = df_countries.iloc[row_index, :].unique()
         # countries lie in the header
-        if triple[1] == "header":
+        else:
             # get the countries' names
             countries = df_countries.columns.values
         # map the code (IT) of countries to their names (Italy)- consistency
