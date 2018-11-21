@@ -13,6 +13,7 @@ class OriginalPaths:
     CAPACITY = os.path.join(_adjusted_path, 'datasets', 'original', 'all_energy_capacity.csv')
     WIND = os.path.join(_adjusted_path, 'datasets', 'original', 'wind_production.csv')
     LATITUDE = os.path.join(_adjusted_path, 'datasets', 'original', 'latitude_countries.csv')
+    DAMS = os.path.join(_adjusted_path, 'datasets', 'original', 'number_of_dams.csv')
 
 class CleanedPaths:
     GDP = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'GDP_2010_constant.csv')
@@ -24,3 +25,4 @@ class CleanedPaths:
     COUNTRIES = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'common_countries.csv')
     YEARS = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'common_years.csv')
     MERIDIAN = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'meridian_countries.csv')
+    DAMS = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'number_of_dams.csv')
