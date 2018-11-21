@@ -48,13 +48,13 @@ def extract_common_years(FILES):
             # get the year values with no repetitions
             mixed_years = df_mixed_years.iloc[:, column_index]
         # years lie in one of the rows
-        if triple[1][0] == "row":
+        elif triple[1][0] == "row":
             # get the row index
             row_index = triple[1][1]
             # get the years with no repetitions
             mixed_years = df_mixed_years.iloc[row_index, :]
         # countries lie in the header
-        if triple[1] == "header":
+        else:
             # get the year values with no repetitions
             mixed_years = df_mixed_years.columns.values
         # mixed_years: pandas object to list type
