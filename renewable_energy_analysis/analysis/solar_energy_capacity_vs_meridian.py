@@ -1,6 +1,10 @@
-""" This script imports all the cleaned dataframes
-    on cumulative energy capacity, energy consumption
-    and meridian distance from the equator.
+""" 
+    This script analyses the cleaned dataframes
+    on cumulative solar energy capacity, energy 
+    consumption and meridian distance from the equator.
+    First the the data on cumulative energy capacity
+    is filtered for solar energy and saved to a 
+    temporary csv file.
     The dataframes are then merged into a single 
     multilevel index dataframe ready for exploratory 
     analysis.
@@ -24,14 +28,7 @@ ALL_ENERGY_CAPACITY = fn.CleanedPaths.CAPACITY
 ENERGY_CONSUMPTION = fn.CleanedPaths.CONSUMPTION
 MERIDIAN_DISTANCE = fn.CleanedPaths.MERIDIAN
 # store filtered dataset for solar capacity in a new csv file
-SOLAR_ENERGY_CAPACITY = os.path.join(fn._adjusted_path, 'analysis', 'solar_capacity.csv')
-#os.path.join('solar_capacity.csv')
-"""This script imports the data on 
-    on cumulative energy capacity and 
-    filters the dataframe only for solar 
-    energy and stores the dataset in 
-    a new csv file
-"""
+TEMP_SOLAR_ENERGY_CAPACITY = os.path.join(fn._adjusted_path, 'analysis', 'solar_capacity.csv')
 
 
 # import energy capacity dataset
@@ -39,9 +36,9 @@ df_energy_capacity = pd.read_csv(ALL_ENERGY_CAPACITY)
 # filter for solar
 df_solar_energy_capacity = df_energy_capacity[df_energy_capacity["Technology"] == "Solar"]
 # store data in a new file
-df_solar_energy_capacity.to_csv(SOLAR_ENERGY_CAPACITY)
+df_solar_energy_capacity.to_csv(TEMP_SOLAR_ENERGY_CAPACITY)
 # group the filenames (values) in a dictionary with a name indentifier (key)
-dataframes = {"solar": SOLAR_ENERGY_CAPACITY, "consumption": ENERGY_CONSUMPTION,
+dataframes = {"solar": TEMP_SOLAR_ENERGY_CAPACITY, "consumption": ENERGY_CONSUMPTION,
               "meridian": MERIDIAN_DISTANCE}
 # loop over all key,value pairs of the dataframes dictionary
 for key, value in dataframes.items():
@@ -52,7 +49,7 @@ for key, value in dataframes.items():
 # concatenate the "dataframes" along the columns - the output is a multi_level index with the key as top level
 data = pd.concat(dataframes, axis=1, join="inner")
 # remove temporary file 
-os.remove(SOLAR_ENERGY_CAPACITY)
+os.remove(TEMP_SOLAR_ENERGY_CAPACITY)
 # column indexes names: consumption', 'meridian', 'solar'], ['2000'-'2015', 'Technology', 'meridian']
 
 # 1 - WHICH COUNTRY OWN MOST OF THE ELECTRIC CAPACITY SYSTEMS
@@ -97,17 +94,27 @@ data["consumption", "total"] = data["consumption"].sum(axis = 1)
 kmeans = sklearn.cluster.KMeans(n_clusters=3, random_state=0).fit(
     np.array(data["consumption", "total"]).reshape(-1, 1))
 # assign the country's level of consumption attribute in the dataframe
-df["consumption", "levels"] = kmeans.labels_
-"""
-
-#print(df)
-# groups using kmeans clustering algorithm
-GDP_groups = {"low": list(df["country"][df["labels"] == 0]),
+data["consumption", "levels"] = kmeans.labels_
+# assign meaning to cluster labels
+"""energy_consumption_groups = {"low": list(datadata.index.values[df["labels"] == 0]),
               "medium":  list(df["country"][df["labels"] == 1]),
               "high": list(df["country"][df["labels"] == 2])}
+ax2 = plt.subplot(131)
+ax2.plot(meridian[GDP_groups["low"]], total_capacity[GDP_groups["low"]],
+         marker='o', linestyle='', ms=8, label="low")
+ax2.legend()
 
+ax3 = plt.subplot(132)
+ax3.plot(meridian[GDP_groups["medium"]], total_capacity[GDP_groups["medium"]],
+         marker='o', linestyle='', ms=8, label="medium")
+ax3.grid(True)
+ax3.legend()
 
-medium = GDP_groups["medium"]
+ax4 = plt.subplot(133)
+ax4.plot(meridian[GDP_groups["high"]], total_capacity[GDP_groups["high"]],
+         marker='o', linestyle='', ms=8, label="high")
+ax4.legend()
 
-meridian_medium = df["country"]["albania"]
-#print(meridian_medium)"""
+plt.show()
+plt.close("all")
+"""
