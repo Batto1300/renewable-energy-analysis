@@ -22,6 +22,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 import sklearn.cluster
+import scipy
 
 # assign paths of the cleaned and/or filtered data sets to a static variable
 ALL_ENERGY_CAPACITY = fn.CleanedPaths.CAPACITY
@@ -83,19 +84,28 @@ plt.ylabel("Cumulative Energy Capacity (M...)")
 plt.show()
 plt.close("all")
 
-# Not all countries require the same energy production - different demands
+# Not all countries require the same amount of energy throughout the year - different demands
 # so we cluster nations in terms of their (cumulative) energy consumption
 # we want three groups - low, medium and high consumption levels (put binning function? and say why kmeans is better)
 # the following imports and implements a k-means algorithm
 #  on our column of interest
 # calculate cumulative/total energy consumption 2000 -> 2015
-data["consumption", "total"] = data["consumption"].sum(axis = 1) 
+data["consumption", "total"] = data["consumption"].sum(axis = 1)
 # cluster countries in 3 groups according to their total energy consumption over the years 2000-2015
 kmeans = sklearn.cluster.KMeans(n_clusters=3, random_state=0).fit(
     np.array(data["consumption", "total"]).reshape(-1, 1))
 # assign the country's level of consumption attribute in the dataframe
 data["consumption", "levels"] = kmeans.labels_
 # assign meaning to cluster labels
+# plotting energy capacity vs meridian distance for different groups - bad code
+levels = [0,1,2]
+for i in range(3):
+    y = data[data["consumption", "levels"]==i]["solar","2015"].values
+    x = data[data["consumption", "levels"]==i]["meridian", "meridian"].values
+    plt.scatter(x=list(x.astype(np.float)), y=list(y.astype(np.float)), marker='o', label="low")
+    plt.show()
+    print(scipy.stats.spearmanr(list(x.astype(np.float)), list(y.astype(np.float))))
+plt.close()
 """energy_consumption_groups = {"low": list(datadata.index.values[df["labels"] == 0]),
               "medium":  list(df["country"][df["labels"] == 1]),
               "high": list(df["country"][df["labels"] == 2])}
