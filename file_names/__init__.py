@@ -7,6 +7,7 @@ _adjusted_path = os.path.sep.join(_adjusted_folders)
 
 class OriginalPaths:
     GDP = os.path.join(_adjusted_path, 'datasets', 'original', 'GDP_2010_constant.csv')
+    GDPPC = os.path.join(_adjusted_path, 'datasets', 'original', 'Download-GDPPC-USD-countries - Download-GDPPC-USD-countries.csv')
     POLITICS = os.path.join(_adjusted_path, 'datasets', 'original', 'CPDS_1960_2016_Update-2018.csv')
     CONSUMPTION = os.path.join(_adjusted_path, 'datasets', 'original', 'energy_consumption.csv')
     CAPACITY = os.path.join(_adjusted_path, 'datasets', 'original', 'all_energy_capacity.csv')
@@ -15,6 +16,7 @@ class OriginalPaths:
 
 class CleanedPaths:
     GDP = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'GDP_2010_constant.csv')
+    GDPPC = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'GDPPC_2010_constant.csv')
     POLITICS = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'CPDS_1960_2016_Update-2018.csv')
     CONSUMPTION = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'energy_consumption.csv')
     CAPACITY = os.path.join(_adjusted_path, 'datasets', 'cleaned', 'all_energy_capacity.csv')
