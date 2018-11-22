@@ -19,13 +19,20 @@ wp = pd.read_csv(open(WIND_PATH))
 years_list = open(YEARS_PATH).readlines()[1:]
 years_list = list(map(lambda x: int(x[:-1]),years_list))
 wp = wp[wp['Year'].isin(years_list)]
+#Creating Common Countires List
+countries_list = open(COMMON_COUNTRIES).readlines()[1:]
+countries_list = list(map(lambda x: x.strip(), countries_list))
 
-#Rename Country Columns
+#DataFrame Formatting
+    #Changing Country Names
 wp.rename(columns={'PL':'Poland','ES':'Spain','UK':'United Kingdom','CZ':'Czech Republic','BG':'Bulgaria','NO':'Norway',
                    'RO':'Romania','DK':'Denmark','HU':'Hungary','EE':'Estonia','CH':'Switzerland', 'IE':'Ireland',
                    'SE':'Sweden','PT':'Portugal','AT':'Austria','BE':'Belgium','EL':'Greece','FI':'Finland','LT':'Lithuania',
                    'LU':'Luxembourg','LV':'Latvia','SK':'Slovakia','NL':'Netherlands','IT':'Italy','DE':'Germany',
                    'FR':'France','SI':'Slovenia','HR':'Croatia'},inplace=True)
+    #Changing Rows and Columns
+    wp = pd.DataFrame(wp,index=[countries_list], columns=[years_list])
 
-#Stacking Countries Into One Column
 
+
+print(wp)
