@@ -20,9 +20,12 @@ years_list = open(YEARS_PATH).readlines()[1:]
 years_list = list(map(lambda x: int(x[:-1]),years_list))
 wp = wp[wp['Year'].isin(years_list)]
 
-#Wind Production Filter by Common Countries
-countries_list = open(COMMON_COUNTRIES).readlines()[1:]
-countries_list = list(map(lambda x: int(x[:-1]),countries_list))
-wp = wp[wp['Poland'].isin(countries_list)]
+#Rename Country Columns
+wp.rename(columns={'PL':'Poland','ES':'Spain','UK':'United Kingdom','CZ':'Czech Republic','BG':'Bulgaria','NO':'Norway',
+                   'RO':'Romania','DK':'Denmark','HU':'Hungary','EE':'Estonia','CH':'Switzerland', 'IE':'Ireland',
+                   'SE':'Sweden','PT':'Portugal','AT':'Austria','BE':'Belgium','EL':'Greece','FI':'Finland','LT':'Lithuania',
+                   'LU':'Luxembourg','LV':'Latvia','SK':'Slovakia','NL':'Netherlands','IT':'Italy','DE':'Germany',
+                   'FR':'France','SI':'Slovenia','HR':'Croatia'},inplace=True)
 
-print(wp)
+#Stacking Countries Into One Column
+
