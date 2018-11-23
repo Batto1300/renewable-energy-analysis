@@ -33,7 +33,9 @@ def MeanWind(x):
 x = df_wind.columns
 MeanWind(x)
 df_wind = MeanWind(x)
-#Filter By Common Countries
-countries_list = pd.read_csv(Countries, engine='python')
+#Transpose DataFrame to appropriate format
+df_wind = pd.DataFrame.transpose(df_wind)
+#Add Country Coloumn
+countries_df = pd.read_csv(open(Countries))
 
-print(df_wind.head())
+print(df_wind)
