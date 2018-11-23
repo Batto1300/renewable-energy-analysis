@@ -27,10 +27,13 @@ df_wind.rename(columns={'PL':'Poland','ES':'Spain','UK':'United Kingdom','CZ':'C
 #Filter by Common Years
 years_df = open(Years).readlines()[1:]
 df_wind = df_wind[df_wind['Year'].isin(years_df)]
-#Calculating Mean Per Year Per Country
+#Calculating Mean Per Year For Each Country
 def MeanWind(x):
     return df_wind.groupby('Year').mean()
 x = df_wind.columns
-print(MeanWind(x))
+MeanWind(x)
+df_wind = MeanWind(x)
 #Filter By Common Countries
 countries_list = pd.read_csv(Countries, engine='python')
+
+print(df_wind.head())
