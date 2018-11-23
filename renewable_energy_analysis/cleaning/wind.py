@@ -34,8 +34,5 @@ x = df_wind.columns
 MeanWind(x)
 df_wind = MeanWind(x)
 #Transpose DataFrame to appropriate format
-df_wind = pd.DataFrame.transpose(df_wind)
-#Add Country Coloumn
-countries_df = pd.read_csv(open(Countries))
-
-print(df_wind)
+df_wind_t = pd.DataFrame.transpose(df_wind)
+print(df_wind_t)
