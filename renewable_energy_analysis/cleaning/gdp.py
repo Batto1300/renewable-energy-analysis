@@ -31,5 +31,6 @@ gdp_df = pd.merge(gdp_df,countries_df, on=COUNTRY_COLUMN_NAME.lower())
 # filter out years setting the index so to filter only the columns
 gdp_df = gdp_df.set_index(COUNTRY_COLUMN_NAME.lower())
 gdp_df = gdp_df[years_list]
+gdp_df = gdp_df.applymap(lambda x: x.replace(".",""))
 # save the resulting dataframe
 gdp_df.to_csv(C_GDP_PATH)
