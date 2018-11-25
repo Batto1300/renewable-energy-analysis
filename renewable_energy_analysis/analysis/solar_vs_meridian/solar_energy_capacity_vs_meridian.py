@@ -63,9 +63,10 @@ solar_capacity_2015_percentage.plot.bar()
 # title
 plt.title("% Total Europe Solar Energy Capacity 2015")
 # ylabel
-plt.ylabel("% Solar Capacity")
+plt.ylabel("% Solar Capacity (MegaWatt)")
+plt.tight_layout()
 # show graph
-plt.show()
+plt.savefig(os.path.join(fn._adjusted_path, 'analysis', 'solar_vs_meridian' ,'solar_capacity_country_2015.png'))
 # close window
 plt.close("all")
 # the top 20% european countries "own" 88% of the cumulative energy capacity in Europe as of 2015
@@ -98,14 +99,19 @@ kmeans = sklearn.cluster.KMeans(n_clusters=3, random_state=0).fit(
 data["consumption", "levels"] = kmeans.labels_
 # assign meaning to cluster labels
 # plotting energy capacity vs meridian distance for different groups - bad code
-levels = [0,1,2]
+levels = ["low energy demand","medium energy demand","high energy demand"]
 for i in range(3):
     y = data[data["consumption", "levels"]==i]["solar","2015"].values
     x = data[data["consumption", "levels"]==i]["meridian", "meridian"].values
-    plt.scatter(x=list(x.astype(np.float)), y=list(y.astype(np.float)), marker='o', label="low")
-    plt.show()
+    plt.scatter(x=list(x.astype(np.float)), y=list(y.astype(np.float)), marker='o', label=str(levels[i]))
+    plt.title("Solar Energy Capacity vs Geographical Location")
+    plt.xlabel("Meridian Distance (Km)")
+    plt.ylabel("Solar Capacity (MegaWatt)")
+    plt.legend()
+    plt.grid()
+    plt.savefig(os.path.join(fn._adjusted_path, 'analysis', 'solar_vs_meridian' , 'solar_meridian_{}.png'.format(levels[i])))
+    plt.close()
     print(scipy.stats.spearmanr(list(x.astype(np.float)), list(y.astype(np.float))))
-plt.close()
 """energy_consumption_groups = {"low": list(datadata.index.values[df["labels"] == 0]),
               "medium":  list(df["country"][df["labels"] == 1]),
               "high": list(df["country"][df["labels"] == 2])}
