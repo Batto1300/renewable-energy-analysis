@@ -101,3 +101,5 @@ venv.bak/
 .DS_Store?
 
 
+*.xml
+*.iml

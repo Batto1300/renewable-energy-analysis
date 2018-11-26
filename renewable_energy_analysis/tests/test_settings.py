@@ -8,4 +8,4 @@ ERROR_MESSAGE = """renewable_energy_analysis Module not found!\
 class TestImport(unittest.TestCase):
     def test_custom_module(self):
         self.assert_(imp.find_loader(
-            'renewable_energy_analysis'), ERROR_MESSAGE)
+            'file_names'), ERROR_MESSAGE)
