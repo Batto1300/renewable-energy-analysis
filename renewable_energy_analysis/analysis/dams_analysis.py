@@ -12,5 +12,7 @@ capacity_df = capacity_df['2015']
 dams_capactiy = dams_df.join(capacity_df)
 
 ax = dams_capactiy.plot.scatter(x='number', y='2015')
-ax.set(xlabel="Number of Damns", ylabel="Hydroelectric Energy Production (MW)")
+ax.set(xlabel="Number of Dams", ylabel="Hydroelectric Energy Capacity (MW)")
+plt.grid()
+plt.title("Hydroelectric Energy vs Number Of Dams", pad = 30)
 plt.show()
