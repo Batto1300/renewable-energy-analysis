@@ -9,7 +9,7 @@
     multilevel index dataframe ready for exploratory 
     analysis.
     Note: by storing the dataframes into a dictionary 
-    with the key being an identifies, then by 
+    with the key being an identifier, then by 
     applying the pandas concatenate function onto 
     the dataframe, the keys will be the indexes name 
     for the highest level of the multilevel indexed 
@@ -84,7 +84,6 @@ plt.xlabel("Meridian Distance (km)")
 plt.ylabel("Cumulative Energy Capacity (MW)")
 plt.show()
 plt.close("all")
-
 # Not all countries require the same amount of energy throughout the year - different demands!
 # so we cluster nations in terms of their (cumulative) energy consumption
 # we want three groups - low, medium and high consumption levels (put binning function? and say why kmeans is better)
@@ -102,55 +101,3 @@ plt.ylabel("2015 Cumulative Solar Capacity ÷ \n Total Cumulative Energy Consump
 plt.title("Geographical Position As Predictor Of Investements In Solar Energy", pad = 30)
 plt.savefig(os.path.join(fn._adjusted_path, 'analysis', 'solar_vs_meridian' , 'solar_meridian_energy_capacity_by_consumption.png'))
 plt.close("all")
-
-
-
-
-
-
-
-
-
-
-# cluster countries in 3 groups according to their total energy consumption over the years 2000-2015
-#kmeans = sklearn.cluster.KMeans(n_clusters=3, random_state=0).fit(
-    #np.array(data["consumption", "total"]).reshape(-1, 1))
-# assign the country's level of consumption attribute in the dataframe
-#data["consumption", "levels"] = kmeans.labels_
-# assign meaning to cluster labels
-# plotting energy capacity vs meridian distance for different groups - bad code
-#levels = ["low energy demand","medium energy demand","high energy demand"]
-#for i in range(3):
-    #y = data[data["consumption", "levels"]==i]["solar","2015"].values
-    #x = data[data["consumption", "levels"]==i]["meridian", "meridian"].values
-    #plt.scatter(x=list(x.astype(np.float)), y=list(y.astype(np.float)), marker='o', label=str(levels[i]))
-    #plt.title("Solar Energy Capacity vs Geographical Location")
-    #plt.xlabel("Meridian Distance (Km)")
-    #plt.ylabel("Solar Capacity (MegaWatt)")
-    #plt.legend()
-    #plt.grid()
-    #plt.savefig(os.path.join(fn._adjusted_path, 'analysis', 'solar_vs_meridian' , 'solar_meridian_{}.png'.format(levels[i])))
-    #plt.close()
-    #print(scipy.stats.spearmanr(list(x.astype(np.float)), list(y.astype(np.float))))
-"""energy_consumption_groups = {"low": list(datadata.index.values[df["labels"] == 0]),
-              "medium":  list(df["country"][df["labels"] == 1]),
-              "high": list(df["country"][df["labels"] == 2])}
-ax2 = plt.subplot(131)
-ax2.plot(meridian[GDP_groups["low"]], total_capacity[GDP_groups["low"]],
-         marker='o', linestyle='', ms=8, label="low")
-ax2.legend()
-
-ax3 = plt.subplot(132)
-ax3.plot(meridian[GDP_groups["medium"]], total_capacity[GDP_groups["medium"]],
-         marker='o', linestyle='', ms=8, label="medium")
-ax3.grid(True)
-ax3.legend()
-
-ax4 = plt.subplot(133)
-ax4.plot(meridian[GDP_groups["high"]], total_capacity[GDP_groups["high"]],
-         marker='o', linestyle='', ms=8, label="high")
-ax4.legend()
-
-plt.show()
-plt.close("all")
-"""
