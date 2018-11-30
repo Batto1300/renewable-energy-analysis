@@ -53,3 +53,4 @@ for country in pol_cap['country'].unique():
 means = pd.DataFrame(data=new_columns, columns=new_columns.keys())
 print(means['right'].mean())
 print(means['left'].mean())
+print(means['center'].mean())
